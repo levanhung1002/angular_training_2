@@ -1,0 +1,44 @@
+<div style="width: 60%; padding-left: 50px" *ngIf="item.amount > 0">
+
+  <div style="display: flex; flex-direction: row; height: auto ; font-weight:bold ">
+
+    <img [src]="item.img" style="height: 120px; width: 120px; margin-right: 40px" alt="logo"/>
+    <div style="display: flex; flex-direction:column; flex-grow: 3;">
+
+      <div style="flex-grow: 1; width: 100%; padding: 5px"> {{item.name}} </div>
+      <div style="flex-grow: 1; width: 100%; padding: 5px"><span
+        style="color: #888888">Color </span><span>{{ item.color}}</span></div>
+
+      <div style="display: flex; flex-grow: 2; width: 100%; flex-direction: row; margin-top: 10px">
+        <div
+          style="border: 2px solid rgba(98,98,98,0.42); display: flex; flex-direction: row; flex-basis: 200px; align-items: center">
+          <button mat-icon-button aria-label="Add" style="flex-grow: 1" (click)="handleAddItem()">
+            <mat-icon>add</mat-icon>
+          </button>
+
+          <div style="flex-grow: 1; text-align: center">{{item.amount}}</div>
+
+          <button mat-icon-button aria-label="delete" style="flex-grow: 1" (click)="handleDeleteItem()">
+            <mat-icon>remove</mat-icon>
+          </button>
+
+        </div>
+
+        <button style="flex-basis: 100px; text-align: left; font-size: 17px" mat-button color="warn"
+                (click)="handleRemoveItem()">REMOVE
+        </button>
+
+      </div>
+
+    </div>
+
+    <div style="display: flex; flex-direction:column; flex-grow: 1; padding: 5px; text-align: right">
+      ${{item.price}}</div>
+
+  </div>
+
+  <div *ngIf="!lastItem" style="height: 1px; background: #888888; margin: 20px"></div>
+
+
+</div>
+

@@ -1,0 +1,16 @@
+.nav-tab-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #888888;
+  margin-bottom: 20px;
+}
+
+.nav-tab-bar > div {
+  width: 150px;
+  text-align: center;
+  font-size: 20px;
+}
